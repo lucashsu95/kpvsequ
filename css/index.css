@@ -1,0 +1,245 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 微軟正黑體 Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #545ef0;
+}
+
+.btn {
+  padding: 0.5% 4%;
+  margin: 5px;
+
+  border: 2px solid #ddd;
+  border-radius: 4px;
+
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  transition: 0.5s;
+  box-shadow: 2px 2px 3px #000;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.backBtn {
+  font-size: 1.3rem;
+  color: #545ef0;
+  font-weight: 900;
+  margin: 15px auto;
+  padding: 0 100px;
+}
+
+.container,
+footer {
+  width: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 900;
+}
+
+.container {
+  font-size: 1.3rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.5rem;
+}
+
+.container > div {
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.repair {
+  width: 60%;
+  height: 300px;
+
+  display: grid;
+  grid-template-rows: 80% 20%;
+  justify-items: center;
+
+  margin: 0 auto;
+
+  border: 1px solid #ddd;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+input,
+select,
+textarea {
+  border: 0;
+}
+
+.repair .main,
+.repair .control-box,
+.repair .main > div,
+.repair .main input,
+.repair .main select,
+.repair .main textarea,
+.information div,
+textarea {
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+}
+
+.repair .main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.repair .control-box {
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.repair .main > div {
+  display: grid;
+  grid-template-rows: repeat(3, 20%) 40%;
+}
+
+.repair .main > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+}
+
+.table,
+.select_page {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-radius: 17px;
+  margin-bottom: 10px;
+  box-shadow: 1.5px 1.5px 5px black;
+}
+.table > .tr:nth-child(1) {
+  background: #add;
+  border-bottom: 2px dashed #333;
+  border-radius: 17px 17px 0 0;
+}
+.table .date {
+  font-size: 0.75rem;
+}
+
+.table .tr {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.information {
+  border: 1px solid #ddd;
+  border-radius: 17px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  font-size: 1.1rem;
+  margin: 0 20px;
+}
+
+.information > div {
+  padding: 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.information > div > div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1% 20px;
+}
+
+.information > div:nth-child(1) {
+  justify-content: center;
+}
+
+.information > div > div:nth-child(1),
+.information > div > div:nth-child(2) {
+  border-bottom: 2px solid #eee;
+}
+
+.information > div:nth-child(1) {
+  background: #ccc;
+  border-radius: 17px 0 0 17px;
+}
+
+.select_page {
+  width: 60%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  padding: 40px;
+}
+.select_page > article:nth-child(2) {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+select {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  text-align: start;
+}
+
+input {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  * {
+    font-size: 16px;
+  }
+  .container,
+  footer {
+    width: 100%;
+    font-size: 3rem;
+  }
+  .container > div {
+    flex-direction: column;
+  }
+  .repair {
+    width: 100%;
+  }
+  .table {
+    width: 100%;
+  }
+  .select_page {
+    width: 100%;
+  }
+  .information {
+    grid-template-columns: 1fr 2fr;
+  }
+  .information > div > div {
+    padding: 5px;
+  }
+}
